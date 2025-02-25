@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="botao">Aperte aqui</button>
+    <script>
+        function nomear(id) {
+            const elemento = document.getElementById(id);
+            elemento.addEventListener('click', function() {
+                if (confirm("Posso saber seu nome?") == true) {
+                    let nome = prompt("Insira seu nome: ");
+                    alert("Seja bem vindo, " + nome + '!');
+                } else {
+                    alert("Você respondeu que não. Que pena! Bye bye!");
+                }
+            });
+        }
+
+    nomear('botao');
+    </script>
+</body>
+</html>
